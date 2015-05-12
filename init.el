@@ -244,7 +244,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
 (global-whitespace-mode)
 (setq whitespace-style '(trailing tabs tab-mark))
 
-(define-key global-map (kbd "s-j") 'ace-jump-mode)
+;; (define-key global-map (kbd "C-j") 'ace-jump-mode)
+(bind-key* "C-j" 'ace-jump-mode)
 
 (defun company-complete-selection-insert-key(company-key)
   (company-complete-selection)
